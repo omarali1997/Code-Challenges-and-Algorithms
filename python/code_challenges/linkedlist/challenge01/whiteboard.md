@@ -1,3 +1,3 @@
 ># My whiteboard
 
-![image](/whiteBord.png)
+<img src="./whiteBord.png">
