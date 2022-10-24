@@ -1,6 +1,12 @@
 # Write your test here
 
-from challenge01 import Node,LinkedList
+from LinkedList import LinkedList, Node
+from challenge01 import *
+
+
+
+
+
 
 
 
@@ -15,9 +21,18 @@ def test1():
     linkedlist.append(node2)
     linkedlist.append(node3)
     linkedlist.append(node4)
-    actual = linkedlist.delete_a_node(5)
+    delete_a_node(node2)
     expected = [4,1,9]
-    assert actual == expected
+    assert linkedlist.printAll() == expected
+
+
+
+
+
+
+
+
+
 
 def test2():
     linkedlist=LinkedList()
@@ -30,12 +45,12 @@ def test2():
     linkedlist.append(node2)
     linkedlist.append(node3)
     linkedlist.append(node4)
-    actual = linkedlist.delete_a_node(1)
+    delete_a_node(node3)
     expected = [4,5,9]
-    assert actual == expected
+    assert linkedlist.printAll() == expected
     
 
-def test4():
+def test3():
     linkedlist=LinkedList()
     node1=Node(4)
     node2=Node(5)
@@ -45,6 +60,6 @@ def test4():
     linkedlist.append(node2)
     linkedlist.append(node3)
     linkedlist.append(node4)
-    actual = linkedlist.delete_a_node(9)
-    expected = [4,5,1]
-    assert actual == expected
+    delete_a_node(node4)
+    expected = [4,5,1,9]
+    assert linkedlist.printAll() == expected
