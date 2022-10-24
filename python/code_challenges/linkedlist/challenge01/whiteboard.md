@@ -1,3 +1,3 @@
 ># My whiteboard
 
-<img src="./whiteBord.png">
+<img src="./codechallenge01.png">
