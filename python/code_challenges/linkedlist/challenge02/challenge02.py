@@ -29,32 +29,16 @@ class LinkedList:
     
     #  Function to get the middle of the linked list
     
-    def printMiddle(self):
-        l2=[]
-        l3=[]
-        count = 0
-        mid = self.head
-        heads = self.head
-        while(heads != None):
-            l2.append(heads.value)
-
-        # Update mid, when 'count' is odd number
-
-            if count&1:
-                mid = mid.next
-            count += 1
-            heads = heads.next
-
-        # If empty list is provided
-        
-        for i in l2:
-            if i == mid.value:
-                l3.append(mid.value)
-                l3.append(mid.next.value)
-                mid1 = mid.next
-                l3.append(mid1.next.value)
-
-        return(l3)
+    def printMiddle(n):
+        if n is None:
+            return None
+        else:
+            middle = n.head
+            middle_next = n.head
+            while middle_next and middle_next.next is not None:
+                middle = middle.next
+                middle_next = middle_next.next.next
+            return middle
 
 
   
@@ -66,25 +50,17 @@ if __name__=='__main__':
     
     for i in range(5, 0, -1):
         llist.append(i)
-    # llist.append(5)
-    # llist.append(4)
-    # llist.append(3)
-    # llist.append(2)
-    # llist.append(1)
+
     print(llist.printAll())
-    print(llist.printMiddle())
+    print(llist.printMiddle().value)
 
     
     llist = LinkedList()
     for i in range(6, 0, -1):
         llist.append(i)
-    # llist.append(5)
-    # llist.append(4)
-    # llist.append(3)
-    # llist.append(2)
-    # llist.append(1)
+
     print(llist.printAll())
-    print(llist.printMiddle())
+    print(llist.printMiddle().value)
     
 
   
