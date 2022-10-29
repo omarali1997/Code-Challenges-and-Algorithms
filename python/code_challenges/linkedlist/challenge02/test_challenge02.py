@@ -8,9 +8,9 @@ def test1():
         llist.append(i)
 
     print(llist.printAll())
-    x=llist.printMiddle()
-    actual = x
-    expected = [3, 4, 5]
+    
+    actual = llist.printMiddle().value
+    expected = 3
     assert actual == expected
 
 
@@ -21,7 +21,7 @@ def test2():
         llist.append(i)
 
     print(llist.printAll())
-    x=llist.printMiddle()
-    actual = x
-    expected = [4, 5, 6]
+    
+    actual = llist.printMiddle().value
+    expected = 4
     assert actual == expected
