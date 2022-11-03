@@ -1,19 +1,21 @@
 # Write here the code challenge solution
+
+# create Class node
 class Node:
     def __init__(self, value):
         self.value = value
         self.next = None
  
- 
+#  create class LinkedList 
 class LinkedList:
     def __init__(self):
         self.head = None
- 
+    # Function to append to linkedlist
     def append(self, value):
         New_Node = Node(value)
         New_Node.next = self.head
         self.head = New_Node
- 
+    # function to print All nodes in linkedlist
     def printAll(self):
         lis=[]
         temp = self.head
@@ -21,7 +23,7 @@ class LinkedList:
             lis.append(temp.value)
             temp = temp.next
         return lis
-
+    # function to delete Nth Node From End
     def deleteNthNodeFromEnd(self, head, n):
         fast = head
         slow = head
@@ -42,7 +44,7 @@ class LinkedList:
         
     
 
- 
+# to show the results
 if __name__ == '__main__':
     l = LinkedList()
     l.append(5)
