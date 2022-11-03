@@ -1,6 +1,6 @@
 # Write your test here
 from challenge03 import LinkedList, Node
-
+#  test 1
 def test1():
     l = LinkedList()
     l.append(1)
@@ -9,8 +9,8 @@ def test1():
     expected = []
     assert actual == expected
 
-
-def test12():
+#  test 2
+def test2():
     l = LinkedList()
     l.append(2)
     l.append(1)
@@ -19,10 +19,9 @@ def test12():
     expected = [1]
     assert actual == expected
 
-    # input = [1, 2]
 
-
-def test13():
+#  test 3
+def test3():
     l = LinkedList()
     l.append(5)
     l.append(4)
