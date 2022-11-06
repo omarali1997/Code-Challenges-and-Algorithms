@@ -3,6 +3,7 @@ class Node:
         self.next = None
         self.value = vlaue
 
+# stack class
 class Stack:
 
     def __init__(self):

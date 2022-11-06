@@ -1,7 +1,7 @@
 # Write your test here
 from challenge01 import MyQueue
 
-
+# push test
 def test_push():
     q = MyQueue()
     q.push(1)
@@ -12,7 +12,7 @@ def test_push():
     q.push(8)
     q.push(9)
     assert q.get_queue()==[1,2,3,7,8,9]
-
+#  pop test
 def test_pop():
     q = MyQueue()
     q.push(1)
@@ -26,7 +26,7 @@ def test_pop():
     q.pop()
     assert q.get_queue()==[3,7,8,9]
 
-
+#  peek test
 def test_peek():
     q = MyQueue()
     q.push(1)
@@ -34,7 +34,7 @@ def test_peek():
     q.peek()
     assert q.get_queue()==[1,2]
 
-
+# is empty test
 def test_is_empty():
     q = MyQueue()
     assert q.is_empty()==True
