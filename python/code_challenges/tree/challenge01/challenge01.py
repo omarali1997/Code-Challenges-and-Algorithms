@@ -1,10 +1,12 @@
 # # Write here the code challenge solution
+
+# tree node class
 class TreeNode():
     def __init__(self, value=0, left=None, right=None):
         self.value = value
         self.left = left
         self.right = right
-
+# pre order function
 def pre_order(x,root):
     if root is not None:
         x.append(root.value)
@@ -13,7 +15,7 @@ def pre_order(x,root):
     if root.right is not None:
         pre_order(x,root.right)
     return x
-
+# function to build tree
 def buildTree( preorder, inorder):
 
     if inorder:
@@ -23,6 +25,8 @@ def buildTree( preorder, inorder):
         root.right = buildTree(preorder, inorder[INDEX+1:])
         return root
 
+
+#  test that
 if __name__ =="__main__":
 
     tree1 = TreeNode()
